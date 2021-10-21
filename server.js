@@ -49,7 +49,7 @@ cron.schedule('* * * * *', () => {
   res.end();
 });
 
-let server = app.listen(8081, function(){
+let server = app.listen(process.env.PORT || 8081, function(){
     let port = server.address().port;
     console.log("Server started at http://localhost:%s", port);
 });
